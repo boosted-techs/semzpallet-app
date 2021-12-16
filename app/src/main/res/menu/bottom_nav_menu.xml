@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <item android:id="@+id/home"
+        android:enabled="true"
+        android:icon="@drawable/ic_home"
+        android:title="@string/home"
+        app:showAsAction="ifRoom" />
+    <item android:id="@+id/about_us"
+        android:enabled="true"
+        android:icon="@drawable/ic_about_us"
+        android:title="@string/about_us"
+        app:showAsAction="ifRoom" />
+    <item android:id="@+id/book_shop"
+        android:enabled="true"
+        android:icon="@drawable/ic_book_shop"
+        android:title="@string/book_shop"
+        app:showAsAction="ifRoom" />
+    <item android:id="@+id/sermons"
+        android:enabled="true"
+        android:icon="@drawable/ic_sermons"
+        android:title="@string/sermons"
+        app:showAsAction="ifRoom" />
+<!--    <item android:id="@+id/more"-->
+<!--        android:enabled="true"-->
+<!--        android:icon="@drawable/ic_more"-->
+<!--        android:title="@string/more_options"-->
+<!--        app:showAsAction="ifRoom" />-->
+    <item android:id="@+id/more"
+        android:enabled="true"
+        android:icon="@drawable/ic_more"
+        android:title="@string/more_options"
+        app:showAsAction="ifRoom" />
+
+
+</menu>

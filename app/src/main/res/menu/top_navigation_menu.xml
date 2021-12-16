@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu    xmlns:android="http://schemas.android.com/apk/res/android">
+        <item android:id="@+id/donate"
+            android:enabled="true"
+            android:icon="@drawable/ic_donate"
+            android:title="@string/donate"
+           />
+        <item android:id="@+id/cart"
+            android:enabled="true"
+            android:icon="@drawable/ic_cart"
+            android:title="@string/shopping_cart"
+            />
+    <item android:id="@+id/events"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_calendar_today_24"
+        android:title="@string/events"
+       />
+    <item android:id="@+id/about_app"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_info_24"
+        android:title="@string/about_app"
+        />
+    </menu>
