@@ -1,18 +1,18 @@
 <resources>
-    <string name="app_name">Agape Meetings</string>
+    <string name="app_name">SEMZ CLOTHING PALLET</string>
     <string name="icon_add_title">Add</string>
-    <string name="shopping_cart">CART</string>
-    <string name="donate">DONATE</string>
-    <string name="events">EVENTS</string>
-    <string name="sermons">SERMONS</string>
-    <string name="book_shop">BOOK SHOP</string>
+    <string name="shopping_cart">CHECKOUT</string>
+    <string name="donate">CONTACT US</string>
+    <string name="events">CHECKOUT</string>
+    <string name="sermons">ACCOUNT</string>
+    <string name="book_shop">SHOP</string>
     <string name="home">HOME</string>
     <string name="about_us">ABOUT US</string>
     <string name="more_options">MORE</string>
-    <string name="email">pastor@agapemeetings.org</string>
-    <string name="email2">pastor@agapemeetings.org</string>
+    <string name="email">shop@asemzpallet.clothing</string>
+    <string name="email2">shop@asemzpallet.clothing</string>
     <string name="search">Search</string>
     <string name="pop_over_menu">Pop over menu</string>
     <string name="about_app">About app</string>
-    <string name="dialog_menu">About Agape Meetings</string>
+    <string name="dialog_menu">About Semz Clothing</string>
 </resources>

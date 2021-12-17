@@ -23,10 +23,10 @@
         android:theme="@style/dunstanTheme"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintHorizontal_bias="0.418"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.752" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/email2"
@@ -36,9 +36,10 @@
         android:text="@string/email2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.645"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/progress"
         app:layout_constraintVertical_bias="1.0"
-        tools:text="pastor@agapemeetings.org" />
+        tools:text="shop@semzpallet.clothing" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

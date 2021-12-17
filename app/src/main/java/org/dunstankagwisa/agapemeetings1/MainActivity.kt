@@ -16,9 +16,7 @@ import android.widget.PopupMenu
 import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.android.synthetic.main.activity_main.*
-import org.dunstankagwisa.agapemeetings1.NetworkConnectivityCheck
 
 class MainActivity : AppCompatActivity() {
     lateinit var myWebView : WebView
@@ -28,60 +26,60 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         myWebView  = findViewById(R.id.webView)
         //var url  = "https://store.boostedtechs.com"
-        loadPages("https://dunstankagwiisa.org")
-        bottom_navigation?.setOnItemSelectedListener {item ->
-            when(item.itemId) {
-                R.id.home -> run {
-                    loadPages("https://dunstankagwiisa.org")
-                }
-
-                R.id.about_us -> run {
-                    loadPages("https://dunstankagwiisa.org/about-us")
-                }
-
-                R.id.book_shop -> run {
-                    loadPages("https://dunstankagwiisa.org/shop")
-                }
-
-                R.id.sermons -> run {
-                    loadPages("https://dunstankagwiisa.org/sermons")
-                }
-                R.id.more -> {
-                    val wrapper: Context =  ContextThemeWrapper(this, R.style.CustomPopUpStyle)
-                   val popupMenu = PopupMenu(wrapper, bottom_navigation, Gravity.RIGHT)
-                    popupMenu.setOnMenuItemClickListener { menuItem ->
-                        when(menuItem.itemId) {
-                            R.id.events -> run {
-                                loadPages("https://dunstankagwiisa.org/events")
-                            }
-                            R.id.donate -> run {
-                                loadPages("https://dunstankagwiisa.org/donate")
-                            }
-                            R.id.cart -> run {
-                                loadPages("https://dunstankagwiisa.org/cart")
-                            }
-                            R.id.about_app -> run {
-                                makeToastMessage("App Version: 1 (1.1.5). Agape Meetings")
-                            }
-                        }
-                        return@setOnMenuItemClickListener true
-                    }
-                    popupMenu.inflate(R.menu.top_navigation_menu)
-                    try { 
-                        val fieldMPopup = PopupMenu::class.java.getDeclaredField("mPopup")
-                        fieldMPopup.isAccessible = true
-                        val mPopup = fieldMPopup.get(popupMenu)
-                        mPopup.javaClass.getDeclaredMethod("setForceShowIcon", Boolean::class.java).invoke(mPopup, true)
-                        Log.e("Icons set", "Icons set")
-                    } catch(e : Exception) {
-                        Log.e("Main Activity", "Popup Icon", e)
-                    } finally {
-                        popupMenu.show()
-                    }
-                }
-            }
-            return@setOnItemSelectedListener true
-        }
+        loadPages("https://semzpallet.clothing/")
+//        bottom_navigation?.setOnItemSelectedListener {item ->
+//            when(item.itemId) {
+//                R.id.home -> run {
+//                    loadPages("https://semzpallet.clothing/")
+//                }
+//
+//                R.id.about_us -> run {
+//                    loadPages("https://semzpallet.clothing/about-semz/")
+//                }
+//
+//                R.id.book_shop -> run {
+//                    loadPages("https://semzpallet.clothing/shop/")
+//                }
+//
+//                R.id.sermons -> run {
+//                    loadPages("https://semzpallet.clothing/checkout/")
+//                }
+//                R.id.more -> {
+//                    val wrapper: Context =  ContextThemeWrapper(this, R.style.CustomPopUpStyle)
+//                   val popupMenu = PopupMenu(wrapper, bottom_navigation, Gravity.RIGHT)
+//                    popupMenu.setOnMenuItemClickListener { menuItem ->
+//                        when(menuItem.itemId) {
+////                            R.id.events -> run {
+////                                loadPages("https://dunstankagwiisa.org/events")
+////                            }
+////                            R.id.donate -> run {
+////                                loadPages("https://dunstankagwiisa.org/donate")
+////                            }
+//                            R.id.cart -> run {
+//                                loadPages("https://semzpallet.clothing/cart/")
+//                            }
+//                            R.id.about_app -> run {
+//                                makeToastMessage("App Version: 1 (1.1.5). SEMZ CLOTHING PALLET BY BOOSTED TECHNOLOGIES LIMITED")
+//                            }
+//                        }
+//                        return@setOnMenuItemClickListener true
+//                    }
+//                    popupMenu.inflate(R.menu.top_navigation_menu)
+//                    try {
+//                        val fieldMPopup = PopupMenu::class.java.getDeclaredField("mPopup")
+//                        fieldMPopup.isAccessible = true
+//                        val mPopup = fieldMPopup.get(popupMenu)
+//                        mPopup.javaClass.getDeclaredMethod("setForceShowIcon", Boolean::class.java).invoke(mPopup, true)
+//                        Log.e("Icons set", "Icons set")
+//                    } catch(e : Exception) {
+//                        Log.e("Main Activity", "Popup Icon", e)
+//                    } finally {
+//                        popupMenu.show()
+//                    }
+//                }
+//            }
+//            return@setOnItemSelectedListener true
+//        }
 
     }
 
@@ -97,7 +95,7 @@ class MainActivity : AppCompatActivity() {
         //myWebView.settings.javaScriptCanOpenWindowsAutomatically = true
         //myWebView.settings.setSupportMultipleWindows(true);
         myWebView.webViewClient = MyWebViewClient()
-        myWebView.settings.userAgentString = "Boosted/agapeMeetings"
+        myWebView.settings.userAgentString = "Boosted/semzclothingpallet"
         progressBar = findViewById(R.id.progressBar3)
         progressBar.visibility = View.VISIBLE
     }
@@ -125,7 +123,7 @@ class MainActivity : AppCompatActivity() {
 
         override fun shouldOverrideUrlLoading(view: WebView?, url: String?): Boolean {
             //makeToastMessage("started webview")
-            if (Uri.parse(url).host.toString() == "www.dunstankagwiisa.org" || Uri.parse(url).host.equals("dunstankagwiisa.org")) {
+            if (Uri.parse(url).host.toString() == "semzpallet.clothing" || Uri.parse(url).host.equals("www.semzpallet.clothing")) {
                 // This is my web site, so do not override; let my WebView load the page
                 return false
             }
@@ -155,8 +153,8 @@ class MainActivity : AppCompatActivity() {
         override fun onPageFinished(view: WebView?, url: String?) {
             //makeToastMessage("Page finished")
             super.onPageFinished(view, url)
-            myWebView.loadUrl("javascript:(function() { " +
-                    "android_app_remove_header(); })()")
+//            myWebView.loadUrl("javascript:(function() { " +
+//                    "android_app_remove_header(); })()")
             //myWebView.evaluateJavascript(javascript){}
             progressBar.visibility = View.GONE
         }
